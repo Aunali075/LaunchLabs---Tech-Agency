@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LaunchLabs – Tech Agency</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap"
+        rel="stylesheet">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Build. Launch. Grow.</h1>
+            <p>Your startup's tech partner for clean, scalable web solutions.</p>
+            <a href="#contact" class="btn-primary">Let’s Talk</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about" data-aos="fade-up">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We help startups bring their ideas to life with powerful design and web development. From MVP to
+                full-scale platforms – we’re your partner in growth.</p>
+        </div>
+    </section>
+
+    <section class="services" id="services" data-aos="fade-right">
+        <div class="container">
+            <h2>What We Offer</h2>
+            <div class="service-grid">
+                <div class="service">
+                    <h3>UI/UX Design</h3>
+                    <p>Intuitive and modern designs to enhance user engagement.</p>
+                </div>
+                <div class="service">
+                    <h3>Front-End Development</h3>
+                    <p>Responsive and fast websites built using HTML, CSS, and JavaScript.</p>
+                </div>
+                <div class="service">
+                    <h3>SEO Optimization</h3>
+                    <p>Improve your visibility and ranking on search engines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio" data-aos="zoom-in-up">
+        <h2>Our Work</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-item">
+                <img src="assets/1.png" alt="SkySync Landing Page">
+                <h3>SkySync Landing Page</h3>
+                <p>A sleek and responsive business landing page.</p>
+                <a href="https://skysync-landing-page.netlify.app/" target="_blank">View Project</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/2.png" alt="Project 2">
+                <h3>Agency Demo</h3>
+                <p>Modern website design for a startup agency.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/3.png" alt="Project 3">
+                <h3>Product Showcase</h3>
+                <p>A minimal design for showcasing digital products.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials" data-aos="flip-right">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p>"They delivered exactly what we needed. Super responsive and professional!"</p>
+                <h4>- Sarah M., Startup Founder</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Great experience working with the team. Highly recommended for front-end work!"</p>
+                <h4>- Alex T., Project Manager</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Our website looks stunning and performs perfectly. Will hire again!"</p>
+                <h4>- Jamie L., Business Owner</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing" data-aos="zoom-in">
+        <h2>Pricing Plans</h2>
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <h3>Basic</h3>
+                <p class="price">$99</p>
+                <ul>
+                    <li>Landing Page Design</li>
+                    <li>Responsive Layout</li>
+                    <li>1 Revision</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+            <div class="pricing-card featured">
+                <h3>Standard</h3>
+                <p class="price">$199</p>
+                <ul>
+                    <li>Landing + About Page</li>
+                    <li>Responsive Layout</li>
+                    <li>3 Revisions</li>
+                    <li>Basic SEO</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Premium</h3>
+                <p class="price">$299</p>
+                <ul>
+                    <li>Full Website (up to 5 pages)</li>
+                    <li>Responsive Layout</li>
+                    <li>Unlimited Revisions</li>
+                    <li>SEO & Performance Optimization</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact" data-aos="zoom-out">
+        <h2>Get in Touch</h2>
+        <form class="contact-form" action="#" method="post" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+            <p>
+                Follow us:
+                <a href="#" target="_blank" rel="noopener">Facebook</a> |
+                <a href="#" target="_blank" rel="noopener">Twitter</a> |
+                <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+
+    <button id="backToTop" title="Go to top">↑</button>
+
+
+
+    <script>
+        const items = document.querySelectorAll('.portfolio-item');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        items.forEach(item => {
+            item.style.animationPlayState = 'paused';
+            observer.observe(item);
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration in ms
+            once: true      // Only animate once
+        });
+    </script>
+
+    <script>
+        const backToTopButton = document.getElementById("backToTop");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        backToTopButton.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+
+
+
+
+    <!-- More sections will go here -->
+
+</body>
+
+</html>
